@@ -1,16 +1,14 @@
-import { useState } from 'react'
-
+import React from "react";
+import BtnTransaction from "./components/BtnTransaction/BtnTransaction";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <header className="App-header">
-        <h1>App</h1>
+        <BtnTransaction />
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
