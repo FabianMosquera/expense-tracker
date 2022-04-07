@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.7rem;
   background-color: #9273f4;
   color: white;
   border: none;
@@ -19,7 +19,7 @@ const Button = styled.button`
 function BtnTransaction(props: any) {
   return (
     <>
-      <Button>Add transaction</Button>
+      <Button type="submit" onClick={props.submit}>Add transaction</Button>
     </>
   );
 }
