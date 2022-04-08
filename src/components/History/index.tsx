@@ -1,22 +1,24 @@
 import React, { useState } from "react";
-import {Scroll} from "./StyledHistory";
+import { Scroll, Item } from "./StyledHistory";
+import styles from "../generalStyles.module.css";
 
-function History({history, setHistory}: any) {
-    //const [history, setHistory] = useState([]);
-
-    return(
-        <>
-        <h2>History</h2>
-        <hr />
-        <Scroll>
-        {history.map(((item: any, index:any) => {
-      if (index == 0) return
-      return <li key={index}>{item.item}   {item.value}</li>
-      }    
-    ))}
-        </Scroll>
-        </>
-    )
+function History({ history, setHistory }: any) {
+  return (
+    <>
+      <h2 className={styles.title}>History</h2>
+      <Scroll>
+        {history.map((item: any, index: number) => {
+          if (index == 0) return;
+          return (
+            <Item key={index} value={item.value}>
+              <div>{item.item}</div>
+              <div>${item.value}</div>
+            </Item>
+          );
+        })}
+      </Scroll>
+    </>
+  );
 }
 
 export default History;

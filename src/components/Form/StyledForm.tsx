@@ -28,7 +28,7 @@ export const Button = styled.input`
 export const Input = styled.input`
   width: 100%;
   margin: 10px 0;
-  padding: 0.4rem 0;
+  padding: 0.4rem 4%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: white;

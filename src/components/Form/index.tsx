@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { FormContent, Input, Label, Button } from "./StyledForm";
+import styles from "../generalStyles.module.css";
 
-function Form({history, setHistory}: any) {
+function Form({ history, setHistory }: any) {
   const [data, setData] = useState({
     payment: "",
     amount: 0,
   });
-
-  let a:any = [];
-  // const [history, setHIstory] = useState([
-  //   {item:"", value:0}
-  // ]);
 
   const handleChange = (event: any) => {
     setData({
@@ -18,18 +14,16 @@ function Form({history, setHistory}: any) {
       [event.target.name]: event.target.value,
     });
   };
+
   const handleSubmit = (event: any) => {
     event.preventDefault();
     event.target.reset();
-    //return console.log(`${data[0].payment}`);
-    //setHIstory(history.concat(data.payment))
-    setHistory([...history,{item:data.payment, value:data.amount}])
+    setHistory([...history, { item: data.payment, value: data.amount }]);
   };
 
   return (
     <>
-      <h2>Add new transaction</h2>
-      <hr />
+      <h2 className={styles.title}>Add new transaction</h2>
       <FormContent onSubmit={handleSubmit}>
         <Label htmlFor="payment">Text</Label>
         <Input
