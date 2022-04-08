@@ -14,7 +14,7 @@ export const Scroll = styled.ul`
 `;
 
 export const Item = styled.li`
-  max-width: 94%;
+  max-width: 96%;
   height: auto;
   margin: 0;
   padding: 0.6rem 4%;
@@ -22,7 +22,7 @@ export const Item = styled.li`
   font-weight: 500;
   background-color: white;
   border-radius: 2px;
-  box-shadow: 12px 0 0 0 ${({ value }: any) => (value > 0 ? "green" : "red")}, 0 1px 2px 0 #a3a3a3;
+  box-shadow: 7px 0 0 0 ${({ value }: any) => (value > 0 ? "green" : "red")}, 0 1px 2px 0 #a3a3a3;
   display: flex;
   justify-content: space-between;
   align-items: center;
