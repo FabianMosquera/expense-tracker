@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import Form from "./components/Form";
-import History from "./components/History";
 import Wrapper from "./components/Wrapper";
+import Home from "./pages/Home/Home";
+
 import "./App.css";
 
 function App() {
-  const [history, setHistory] = useState([{ item: "", value: 0 }]);
-
   return (
     <div className="App">
       <Wrapper>
-        <History history={history} setHistory={setHistory} />
-        <Form history={history} setHistory={setHistory} />
+        <Home />
       </Wrapper>
     </div>
   );

@@ -12,7 +12,7 @@ function History({ history, setHistory }: any) {
           return (
             <Item key={index} value={item.value}>
               <div>{item.item}</div>
-              <div>${item.value}</div>
+              <div>{item.value}</div>
             </Item>
           );
         })}

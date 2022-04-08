@@ -20,7 +20,6 @@ html {
 body {
   font-size: calc(15px + (20 - 15) * ((100vw - 280px) / (2000 - 280)));
   background-color: #f6f6f4;
-  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {

@@ -2,6 +2,16 @@
   margin: 15px 0;
   padding: 5px 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   border-bottom: 1.5px solid rgb(196, 196, 196);
+}
+
+.subTitle {
+  font-size: calc(1rem + 1vw);
+  font-weight: 400;
+  margin: 0;
+}
+
+.isLine {
+  border-bottom: none;
 }

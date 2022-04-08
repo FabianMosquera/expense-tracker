@@ -11,13 +11,14 @@ export const Scroll = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  scrollbar-width: none;
 `;
 
 export const Item = styled.li`
   max-width: 96%;
   height: auto;
   margin: 0;
-  padding: 0.6rem 4%;
+  padding: 0.8rem 4%;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   background-color: white;
