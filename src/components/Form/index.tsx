@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { FormContent, Input, Label, Button } from "./StyledForm";
 
-function Form(props: any) {
+function Form({history, setHistory}: any) {
   const [data, setData] = useState({
-    payment: [],
-    amount: [],
+    payment: "",
+    amount: 0,
   });
+
+  let a:any = [];
+  // const [history, setHIstory] = useState([
+  //   {item:"", value:0}
+  // ]);
 
   const handleChange = (event: any) => {
     setData({
@@ -16,7 +21,9 @@ function Form(props: any) {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     event.target.reset();
-    return console.log(`${data.payment} - ${data.amount}`);
+    //return console.log(`${data[0].payment}`);
+    //setHIstory(history.concat(data.payment))
+    setHistory([...history,{item:data.payment, value:data.amount}])
   };
 
   return (
